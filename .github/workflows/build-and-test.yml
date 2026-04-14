@@ -55,5 +55,5 @@ jobs:
         run: |
           export PATH="${{ github.workspace }}/riscv/bin:$PATH"
           export RISCV="${{ github.workspace }}/riscv"
-          make generate-stage1 --environment-overrides VLEN=${{ matrix.VLEN }} XLEN=${{ matrix.XLEN }} PATTERN=vmulh_vv
-          make all -j$(nproc) --environment-overrides VLEN=${{ matrix.VLEN }} XLEN=${{ matrix.XLEN }} PATTERN=vmulh_vv
+          make generate-stage1 --environment-overrides VLEN=${{ matrix.VLEN }} XLEN=${{ matrix.XLEN }} PATTERN='vmul*'
+          make all -j$(nproc) --environment-overrides VLEN=${{ matrix.VLEN }} XLEN=${{ matrix.XLEN }} PATTERN='vmul*'
